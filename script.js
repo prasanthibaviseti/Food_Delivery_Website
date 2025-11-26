@@ -1,74 +1,76 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const menuSection = document.getElementById('menu');
-    const cartSection = document.getElementById('cart');
-    const cartItemsList = document.getElementById('cart-items');
-    const totalCostDisplay = document.getElementById('total-cost');
-  
-    // Sample menu data
-    const menuItems = [
-      { name: 'Item 1', price: 10.99, description: 'Description 1', image: 'item1.jpg' },
-      { name: 'Item 2', price: 12.99, description: 'Description 2', image: 'item2.jpg' },
-      // Add more items as needed
-    ];
-  
-    // Sample cart data
-    const cartItems = [];
-  
-    // Render menu items
-    menuItems.forEach(item => {
-      const menuItemHTML = `
-        <div class="menu-item">
-          <img src="${item.image}" alt="${item.name}">
-          <h3>${item.name}</h3>
-          <p>${item.description}</p>
-          <p>${item.price.toFixed(2)}</p>
-          <button onclick="addToCart('${item.name}', ${item.price})">Add to Cart</button>
-        </div>
-      `;
-      menuSection.innerHTML += menuItemHTML;
-    });
-  
-    // Add to Cart function
-    window.addToCart = function (itemName, itemPrice) {
-      const existingCartItem = cartItems.find(item => item.name === itemName);
-  
-      if (existingCartItem) {
-        existingCartItem.quantity++;
-      } else {
-        cartItems.push({ name: itemName, price: itemPrice, quantity: 1 });
-      }
-  
-      renderCart();
-    };
-  
-    // Remove item from Cart function
-    window.removeFromCart = function (itemName) {
-      const itemIndex = cartItems.findIndex(item => item.name === itemName);
-      if (itemIndex !== -1) {
-        cartItems.splice(itemIndex, 1);
-      }
-  
-      renderCart();
-    };
-  
-    // Render Cart function
-    function renderCart() {
-      cartItemsList.innerHTML = '';
-      let totalCost = 0;
-  
-      cartItems.forEach(item => {
-        const cartItemHTML = `
-          <li class="cart-item">
-            <span>${item.name} - ${item.quantity} x $${item.price.toFixed(2)}</span>
-            <button onclick="removeFromCart('${item.name}')">Remove</button>
-          </li>
-        `;
-        cartItemsList.innerHTML += cartItemHTML;
-  
-        totalCost += item.price * item.quantity;
-      });
-  
-      totalCostDisplay.textContent = `Total: $${totalCost.toFixed(2)}`;
-    }
+// CART ARRAY
+let cart = [];
+
+// SELECT ALL "Add to Cart" BUTTONS
+const addButtons = document.querySelectorAll(".add-to-cart");
+
+// EVENT LISTENER FOR EACH BUTTON
+addButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const card = btn.parentElement;
+
+    const name = card.querySelector("h3").innerText;
+    const price = parseFloat(
+      card.querySelector(".price").innerText.replace("$", "")
+    );
+
+    addToCart(name, price);
   });
-  
+});
+
+// ADD ITEM TO CART
+function addToCart(name, price) {
+  cart.push({ name, price });
+
+  updateCart();
+  showAddedNotification(name);
+}
+
+// UPDATE CART DISPLAY
+function updateCart() {
+  const cartContainer = document.getElementById("cart-container");
+
+  if (!cartContainer) return; // If no cart on page, exit
+
+  cartContainer.innerHTML = ""; // Clear existing
+
+  let total = 0;
+
+  cart.forEach((item, index) => {
+    total += item.price;
+
+    const li = document.createElement("li");
+    li.classList.add("cart-item");
+    li.innerHTML = `
+      ${item.name} - $${item.price.toFixed(2)}
+      <button class="remove-btn" data-index="${index}">x</button>
+    `;
+    cartContainer.appendChild(li);
+  });
+
+  document.getElementById("total-amount").innerText = total.toFixed(2);
+
+  // REMOVE BUTTON FUNCTIONALITY
+  const removeBtns = document.querySelectorAll(".remove-btn");
+  removeBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const index = btn.getAttribute("data-index");
+      cart.splice(index, 1);
+      updateCart();
+    });
+  });
+}
+
+// CUTE POPUP WHEN ITEM ADDED
+function showAddedNotification(name) {
+  const note = document.createElement("div");
+  note.classList.add("popup");
+
+  note.innerText = `${name} added to cart 💗`;
+
+  document.body.appendChild(note);
+
+  setTimeout(() => {
+    note.remove();
+  }, 1500);
+}
