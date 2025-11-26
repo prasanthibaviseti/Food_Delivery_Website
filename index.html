@@ -1,109 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Food Delivery</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FoodDelivery — Pastel Menu (Final)</title>
 
-  <!-- Google Font -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-  <!-- NAVIGATION -->
   <header class="navbar">
-    <div class="logo">Food<span>Delivery</span></div>
+    <div class="logo">
+      <span class="brand-text">FoodDelivery</span>
+    </div>
     <nav>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#menu">Menu</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#cart">Cart</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
   <section id="home" class="hero">
     <h1>Delicious Food Delivered To Your Doorstep</h1>
-    <p>Your favorite meals, fresh & fast.</p>
+    <p>Your favourite meals, fresh & fast </p>
     <a href="#menu" class="btn">Order Now</a>
   </section>
 
-  <!-- MENU SECTION -->
   <section id="menu" class="menu-section">
-    <h2>Popular Items</h2>
+    <h2>Our Menu — Fast Food & Indian Classics (15 items)</h2>
 
     <div class="menu-grid">
 
-      <!-- ITEM 1 -->
-      <div class="menu-card">
-        <img src="https://i.imgur.com/5MZocCk.jpeg" alt="Burger" />
+      <!-- 1 Classic Burger -->
+      <div class="menu-card" data-name="Classic Burger" data-price="179">
+        <img src="images/burger.jpeg" alt="Burger">
         <h3>Classic Burger</h3>
-        <p>Juicy beef patty with fresh veggies.</p>
-        <p class="price">$9.99</p>
+        <p>Juicy patty, lettuce & cheese.</p>
+        <p class="price">₹179</p>
         <button class="btn add-to-cart">Add to Cart</button>
       </div>
 
-      <!-- ITEM 2 -->
-      <div class="menu-card">
-        <img src="https://i.imgur.com/8wRGfAz.jpeg" alt="Pizza" />
+      <!-- 2 Cheese Pizza -->
+      <div class="menu-card" data-name="Cheese Pizza" data-price="399">
+        <img src="images/cheese%20pizza.jpg.webp" alt="Pizza">
         <h3>Cheese Pizza</h3>
-        <p>Loaded with extra cheese & herbs.</p>
-        <p class="price">$12.99</p>
+        <p>Extra cheese & basil.</p>
+        <p class="price">₹399</p>
         <button class="btn add-to-cart">Add to Cart</button>
       </div>
 
-      <!-- ITEM 3 -->
-      <div class="menu-card">
-        <img src="https://i.imgur.com/REcXv1R.jpeg" alt="Pasta" />
-        <h3>Italian Pasta</h3>
-        <p>Creamy Alfredo with herbs.</p>
-        <p class="price">$10.49</p>
+      <!-- 3 Crispy Fries -->
+      <div class="menu-card" data-name="Crispy Fries" data-price="99">
+        <img src="images/fries.avif" alt="Fries">
+        <h3>Crispy Fries</h3>
+        <p>Salted & crunchy.</p>
+        <p class="price">₹99</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- 4 Classic Hotdog -->
+      <div class="menu-card" data-name="Classic Hotdog" data-price="149">
+        <img src="images/hotdog.jpeg" alt="Hotdog">
+        <h3>Classic Hotdog</h3>
+        <p>Mustard, ketchup & onions.</p>
+        <p class="price">₹149</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- 5 Fried Chicken -->
+      <div class="menu-card" data-name="Fried Chicken" data-price="499">
+        <img src="images/fry%20chicken%20.jpg" alt="Fried Chicken">
+        <h3>Fried Chicken</h3>
+        <p>Crispy, spiced & golden.</p>
+        <p class="price">₹499</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- 6 Creamy Pasta -->
+      <div class="menu-card" data-name="Creamy Pasta" data-price="229">
+        <img src="images/pasta.jpeg" alt="Pasta">
+        <h3>Creamy Pasta</h3>
+        <p>Alfredo sauce & herbs.</p>
+        <p class="price">₹229</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- 7 Veg Sandwich -->
+      <div class="menu-card" data-name="Veg Sandwich" data-price="119">
+        <img src="images/veg%20sanwich.jpeg" alt="Veg Sandwich">
+        <h3>Veg Sandwich</h3>
+        <p>Grilled veggies & mayo.</p>
+        <p class="price">₹119</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- 8 Fresh Cola -->
+      <div class="menu-card" data-name="Fresh Cola" data-price="59">
+        <img src="images/CoolDrink.jpg" alt="Cola">
+        <h3>Fresh Cola</h3>
+        <p>Chilled soft drink (500ml).</p>
+        <p class="price">₹59</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- 9 Hyderabadi Biryani -->
+      <div class="menu-card" data-name="Hyderabadi Biryani" data-price="349">
+        <img src="images/dum%20biryani.jpg" alt="Biryani">
+        <h3>Hyderabadi Biryani</h3>
+        <p>Spiced rice with tender meat.</p>
+        <p class="price">₹349</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- 10 Paneer Butter Masala -->
+      <div class="menu-card" data-name="Paneer Butter Masala" data-price="259">
+        <img src="images/paneer%20butter%20masala.jpeg" alt="Paneer">
+        <h3>Paneer Butter Masala</h3>
+        <p>Rich tomato & butter gravy.</p>
+        <p class="price">₹259</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- 11 Roti & Sabzi -->
+      <div class="menu-card" data-name="Roti & Sabzi" data-price="129">
+        <img src="images/roti.jpeg" alt="Roti">
+        <h3>Roti & Sabzi</h3>
+        <p>Fresh rotis with seasonal veggies.</p>
+        <p class="price">₹129</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- 12 Chole Bhature -->
+      <div class="menu-card" data-name="Chole Bhature" data-price="199">
+        <img src="images/chole.jpeg" alt="Chole Bhature">
+        <h3>Chole Bhature</h3>
+        <p>Fluffy bhature with spicy chole.</p>
+        <p class="price">₹199</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- 13 Seekh Kebab -->
+      <div class="menu-card" data-name="Seekh Kebab" data-price="299">
+        <img src="images/kebab.jpeg" alt="Kebab">
+        <h3>Seekh Kebab</h3>
+        <p>Succulent spiced meat skewers.</p>
+        <p class="price">₹299</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- 14 Masala Dosa -->
+      <div class="menu-card" data-name="Masala Dosa" data-price="159">
+        <img src="images/dosa.jpeg" alt="Dosa">
+        <h3>Masala Dosa</h3>
+        <p>Crispy dosa with potato masala.</p>
+        <p class="price">₹159</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- 15 Idli Sambhar -->
+      <div class="menu-card" data-name="Idli Sambhar" data-price="129">
+        <img src="images/idli%20sambar.jpeg" alt="Idli">
+        <h3>Idli Sambhar</h3>
+        <p>Steamed idli with hot sambar.</p>
+        <p class="price">₹129</p>
         <button class="btn add-to-cart">Add to Cart</button>
       </div>
 
     </div>
   </section>
 
-  <!-- CART SECTION -->
-  <section class="cart">
+  <section id="cart" class="cart">
     <h2>Your Cart</h2>
     <ul id="cart-container"></ul>
-    <p class="total">Total: $<span id="total-amount">0.00</span></p>
+
+    <div class="cart-footer">
+      <div class="cart-total">Grand Total: <strong>₹<span id="total-amount">0.00</span></strong></div>
+      <button id="checkout" class="btn">Checkout</button>
+    </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="about-section">
-    <h2>About Us</h2>
-    <p>
-      We deliver high-quality & delicious meals with love.
-      Our mission is to bring flavor, freshness, and joy to your plates.
-    </p>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="contact-section">
-    <h2>Contact Us</h2>
-    <p>Email: support@fooddelivery.com</p>
-    <p>Phone: +91 98765 43210</p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Food Delivery. All rights reserved.</p>
+  <footer id="contact" class="footer">
+    <p>© 2025 FoodDelivery — Made with ❤️</p>
   </footer>
 
-  <!-- JS -->
   <script src="script.js"></script>
-
 </body>
 </html>
