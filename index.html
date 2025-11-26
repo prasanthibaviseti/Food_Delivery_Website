@@ -1,115 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Food Delivery Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Delivery</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-  <header>
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="logo">Food<span>Delivery</span></div>
     <nav>
-      <h1>Food Delivery</h1>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">Contact</a></li>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="menu">
-    <h2>Menu</h2>
-    <div class="menu-item" data-id="1">
-        <img src="" alt="Burger">
-        <h3>Burger</h3>
-        <p>Delicious burger with all the fixings.</p>
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <h1>Delicious Food Delivered To Your Doorstep</h1>
+    <p>Your favorite meals, fresh & fast.</p>
+    <a href="#menu" class="btn">Order Now</a>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section id="menu" class="menu-section">
+    <h2>Popular Items</h2>
+
+    <div class="menu-grid">
+
+      <!-- ITEM 1 -->
+      <div class="menu-card">
+        <img src="https://i.imgur.com/5MZocCk.jpeg" alt="Burger" />
+        <h3>Classic Burger</h3>
+        <p>Juicy beef patty with fresh veggies.</p>
         <p class="price">$9.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <button class="btn add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="menu-card">
+        <img src="https://i.imgur.com/8wRGfAz.jpeg" alt="Pizza" />
+        <h3>Cheese Pizza</h3>
+        <p>Loaded with extra cheese & herbs.</p>
+        <p class="price">$12.99</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- ITEM 3 -->
+      <div class="menu-card">
+        <img src="https://i.imgur.com/REcXv1R.jpeg" alt="Pasta" />
+        <h3>Italian Pasta</h3>
+        <p>Creamy Alfredo with herbs.</p>
+        <p class="price">$10.49</p>
+        <button class="btn add-to-cart">Add to Cart</button>
+      </div>
+
     </div>
+  </section>
 
-</section>
-
-<section id="cart">
-    <h2>Shopping Cart</h2>
-    <ul id="cart-items"></ul>
-    <p>Total: $<span id="total">0.00</span></p>
-    <button id="checkout">Checkout</button>
-</section>
-
-<script src="script.js"></script>
-
-  <section id="about">
+  <!-- ABOUT -->
+  <section id="about" class="about-section">
     <h2>About Us</h2>
-    <p>We are committed to delivering delicious and high-quality food to our customers.
-      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Fuga deleniti quia, omnis autem, 
-      alias incidunt ab necessitatibus veritatis aspernatur dignissimos recusandae laboriosam iure illo delectus ipsa repellat ad! Facilis, assumenda.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officia voluptates tempora quae non nihil assumenda aliquid dolore placeat quis itaque, porro expedita voluptatibus aspernatur mollitia, laboriosam sapiente pariatur incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem assumenda reprehenderit temporibus provident minus autem explicabo exercitationem accusantium numquam, iusto fugit, at voluptates. Dolores architecto illo nulla quia voluptates commodi.lorem</h1>
+    <p>
+      We deliver high-quality & delicious meals with love.  
+      Our mission is to bring flavor, freshness, and joy to your plates.
     </p>
-    <p>We are committed to delivering delicious and high-quality food to our customers.
-      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Fuga deleniti quia, omnis autem, 
-      alias incidunt ab necessitatibus veritatis aspernatur dignissimos recusandae laboriosam iure illo delectus ipsa repellat ad! Facilis, assumenda.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officia voluptates tempora quae non nihil assumenda aliquid dolore placeat quis itaque, porro expedita voluptatibus aspernatur mollitia, laboriosam sapiente pariatur incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem assumenda reprehenderit temporibus provident minus autem explicabo exercitationem accusantium numquam, iusto fugit, at voluptates. Dolores architecto illo nulla quia voluptates commodi.lorem</h1>
-    </p>
-    <p>We are committed to delivering delicious and high-quality food to our customers.
-      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Fuga deleniti quia, omnis autem, 
-      alias incidunt ab necessitatibus veritatis aspernatur dignissimos recusandae laboriosam iure illo delectus ipsa repellat ad! Facilis, assumenda.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officia voluptates tempora quae non nihil assumenda aliquid dolore placeat quis itaque, porro expedita voluptatibus aspernatur mollitia, laboriosam sapiente pariatur incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem assumenda reprehenderit temporibus provident minus autem explicabo exercitationem accusantium numquam, iusto fugit, at voluptates. Dolores architecto illo nulla quia voluptates commodi.lorem</h1>
-    </p>
-    <p>We are committed to delivering delicious and high-quality food to our customers.
-      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Fuga deleniti quia, omnis autem, 
-      alias incidunt ab necessitatibus veritatis aspernatur dignissimos recusandae laboriosam iure illo delectus ipsa repellat ad! Facilis, assumenda.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officia voluptates tempora quae non nihil assumenda aliquid dolore placeat quis itaque, porro expedita voluptatibus aspernatur mollitia, laboriosam sapiente pariatur incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem assumenda reprehenderit temporibus provident minus autem explicabo exercitationem accusantium numquam, iusto fugit, at voluptates. Dolores architecto illo nulla quia voluptates commodi.lorem</h1>
-    </p>
-    <p>We are committed to delivering delicious and high-quality food to our customers.
-      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Fuga deleniti quia, omnis autem, 
-      alias incidunt ab necessitatibus veritatis aspernatur dignissimos recusandae laboriosam iure illo delectus ipsa repellat ad! Facilis, assumenda.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officia voluptates tempora quae non nihil assumenda aliquid dolore placeat quis itaque, porro expedita voluptatibus aspernatur mollitia, laboriosam sapiente pariatur incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem assumenda reprehenderit temporibus provident minus autem explicabo exercitationem accusantium numquam, iusto fugit, at voluptates. Dolores architecto illo nulla quia voluptates commodi.lorem</h1>
-    </p>
-    <p>We are committed to delivering delicious and high-quality food to our customers.
-      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Fuga deleniti quia, omnis autem, 
-      alias incidunt ab necessitatibus veritatis aspernatur dignissimos recusandae laboriosam iure illo delectus ipsa repellat ad! Facilis, assumenda.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officia voluptates tempora quae non nihil assumenda aliquid dolore placeat quis itaque, porro expedita voluptatibus aspernatur mollitia, laboriosam sapiente pariatur incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem assumenda reprehenderit temporibus provident minus autem explicabo exercitationem accusantium numquam, iusto fugit, at voluptates. Dolores architecto illo nulla quia voluptates commodi.lorem</h1>
-    </p>
-    <p>We are committed to delivering delicious and high-quality food to our customers.
-      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Fuga deleniti quia, omnis autem, 
-      alias incidunt ab necessitatibus veritatis aspernatur dignissimos recusandae laboriosam iure illo delectus ipsa repellat ad! Facilis, assumenda.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officia voluptates tempora quae non nihil assumenda aliquid dolore placeat quis itaque, porro expedita voluptatibus aspernatur mollitia, laboriosam sapiente pariatur incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem assumenda reprehenderit temporibus provident minus autem explicabo exercitationem accusantium numquam, iusto fugit, at voluptates. Dolores architecto illo nulla quia voluptates commodi.lorem</h1>
-    </p>
-    <p>We are committed to delivering delicious and high-quality food to our customers.
-      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Fuga deleniti quia, omnis autem, 
-      alias incidunt ab necessitatibus veritatis aspernatur dignissimos recusandae laboriosam iure illo delectus ipsa repellat ad! Facilis, assumenda.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officia voluptates tempora quae non nihil assumenda aliquid dolore placeat quis itaque, porro expedita voluptatibus aspernatur mollitia, laboriosam sapiente pariatur incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem assumenda reprehenderit temporibus provident minus autem explicabo exercitationem accusantium numquam, iusto fugit, at voluptates. Dolores architecto illo nulla quia voluptates commodi.lorem</h1>
-    </p>
-
   </section>
 
-  <section id="contact">
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
     <h2>Contact Us</h2>
-    <!-- Add contact form or information here -->
+    <p>Email: support@fooddelivery.com</p>
+    <p>Phone: +91 98765 43210</p>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2023 Food Delivery</p>
+    <p>© 2025 Food Delivery. All rights reserved.</p>
   </footer>
 
-  <aside id="cart">
-    <h2>Shopping Cart</h2>
-    <ul id="cart-items">
-      <!-- Cart items go here -->
-    </ul>
-    <p id="total-cost">Total: $0.00</p>
-  </aside>
-
+  <!-- JS -->
   <script src="script.js"></script>
+
 </body>
 </html>
