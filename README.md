@@ -1,57 +1,40 @@
-🍽️ FoodDelivery — Modern Food Ordering Frontend
-A clean, responsive, pastel-themed food ordering UI built with HTML, CSS, and JavaScript.
-Features include a 15-item menu (Fast Food + Indian Cuisine), interactive cart system, quantity controls, local image support, and a smooth user experience — all without any backend.
-⭐ Overview
-FoodDelivery is a static web application designed to demonstrate:
-Frontend UI/UX development
-DOM manipulation with JavaScript
-Cart logic & state management
-Clean component-style HTML structure
-Professional deployment-ready code
-Perfect for portfolios, frontend practice, or as the base for a future full-stack project.
-✨ Features
-🍔 Fully Interactive Menu (15 Items)
-Fast Food + Indian Dishes
-Local image support (no broken images)
-Prices in INR
-🛒 Cart System
-Add items
-Increase / decrease quantities
-Auto-remove when quantity hits zero
-Live Grand Total update
-Smooth UI feedback (popups, styling)
-🎨 Pastel Modern UI
-Soft color palette
-Rounded cards
-Shadowed components
-Mobile-friendly responsive grid
-🍽️ FoodDelivery — Modern Food Ordering Frontend
-A clean, responsive, pastel-themed food ordering UI built with HTML, CSS, and JavaScript.
-Features include a 15-item menu (Fast Food + Indian Cuisine), interactive cart system, quantity controls, local image support, and a smooth user experience — all without any backend.
-⭐ Overview
-FoodDelivery is a static web application designed to demonstrate:
-Frontend UI/UX development
-DOM manipulation with JavaScript
-Cart logic & state management
-Clean component-style HTML structure
-Professional deployment-ready code
-Perfect for portfolios, frontend practice, or as the base for a future full-stack project.
-✨ Features
-🍔 Fully Interactive Menu (15 Items)
-Fast Food + Indian Dishes
-Local image support (no broken images)
-Prices in INR
-🛒 Cart System
-Add items
-Increase / decrease quantities
-Auto-remove when quantity hits zero
-Live Grand Total update
-Smooth UI feedback (popups, styling)
-🎨 Pastel Modern UI
-Soft color palette
-Rounded cards
-Shadowed components
-Mobile-friendly responsive grid
-⚡ Pure Frontend (No Backend Required)
-Deploy instantly on GitHub Pages or Netlify
-Works entirely client-side
+🍽️ FoodDelivery
+A clean, responsive, pastel-themed food ordering UI built using HTML, CSS, and JavaScript.
+The project includes a 15-item menu (Fast Food + Indian Cuisine), a working cart with quantity controls, and locally stored images for fast, reliable loading.
+⭐ Features
+15-item Menu (Fast Food + Indian Dishes)
+Add to Cart with + / − quantity controls
+Live Grand Total updated automatically
+Responsive Layout for mobile & desktop
+Pastel Modern UI with soft colors and rounded cards
+Pure Frontend — no backend required
+📂 Project Structure
+FoodDelivery/
+│── index.html
+│── styles.css
+│── script.js
+│── images/
+│     ├── burger.jpeg
+│     ├── cheese pizza.jpg.webp
+│     ├── chole.jpeg
+│     ├── CoolDrink.jpg
+│     ├── dosa.jpeg
+│     ├── dum biryani.jpg
+│     ├── fries.avif
+│     ├── fry chicken .jpg
+│     ├── hotdog.jpeg
+│     ├── veg sanwich.jpeg
+│     ├── idli sambar.jpeg
+│     ├── kebab.jpeg
+│     ├── paneer butter masala.jpeg
+│     ├── pasta.jpeg
+│     ├── roti.jpeg
+└── README.md
+🛠️ Tech Stack
+HTML5
+CSS3
+JavaScript (ES6)
+Local Image Assets
+💖 About
+Designed with a focus on clean UI, smooth functionality, and aesthetic visuals.
+Perfect as a frontend project or portfolio piece.
